@@ -39,14 +39,6 @@ pipeline {
            }
        }
 
-	   stage ('Cleanup Artifacts') {
-           steps {
-               script {
-                    sh "docker rmi ${IMAGE_NAME}:latest"
-               }
-          }
-       }
-
 	   stage("Build & Push Docker Image") {
             steps {
                 script {
@@ -56,7 +48,6 @@ pipeline {
 
                     docker.withRegistry('',DOCKER_PASS) {
                         docker_image.push("${IMAGE_TAG}")
-                        docker_image.push('latest')
                     }
                 }
             }
