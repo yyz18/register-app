@@ -33,6 +33,6 @@
 
    <h1> Thank You </h1>
    <br>
-   <h1> Have a great evening folks!!! </h1>
+   <h1> Have a pleasant evening! </h1>
    
 </form>
